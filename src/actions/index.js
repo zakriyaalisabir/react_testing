@@ -1,0 +1,6 @@
+const ACTIONS = {
+  GET_POSTS: 'GET_POSTS',
+  GET_COMMENTS: 'GET_COMMENTS'
+}
+
+export default ACTIONS

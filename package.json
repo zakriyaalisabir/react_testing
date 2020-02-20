@@ -1,0 +1,63 @@
+{
+  "name": "react_testing",
+  "description": "React unit & integration testing of components,reducers,actions creator,proptypes.",
+  "keywords": [
+    "react",
+    "npm",
+    "jest",
+    "enzyme",
+    "unit",
+    "integration",
+    "redux",
+    "redux-saga",
+    "husky",
+    "prettier",
+    "testing"
+  ],
+  "version": "1.0.0",
+  "author": "Zakriya Ali Sabir",
+  "homepage": "https://github.com/zakriyaalisabir",
+  "dependencies": {
+    "enzyme-adapter-react-16": "^1.15.2",
+    "hardtack": "4.1.0",
+    "lodash": "^4.17.15",
+    "prop-types": "^15.7.2",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-redux": "6.0.0",
+    "redux": "4.0.1",
+    "redux-api-middleware": "3.0.1",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "enzyme": "3.11.0",
+    "husky": "1.3.1",
+    "jest": "23.6.0",
+    "lint-staged": "8.1.5",
+    "prettier": "1.15.3",
+    "react-scripts": "2.1.8",
+    "redux-logger": "3.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "verbose": true,
+    "coverage": true,
+    "watchAll": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
