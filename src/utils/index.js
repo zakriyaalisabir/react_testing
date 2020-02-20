@@ -5,13 +5,13 @@ const findByAttribute = (component, searchParam) => {
 }
 
 const checkPropErrors = (component, props) => {
-  console.log(component)
-
-  const { PropTypes } = component
-
   if (isEmpty(component) || isEmpty(props)) return null
 
-  return PropTypes.filter(prop => prop !== typeof prop) !== []
+  console.log({ component })
+
+  const compProps = component.props()
+
+  return compProps.filter(prop => prop !== typeof prop) !== []
 }
 
 module.exports = { findByAttribute, checkPropErrors }

@@ -12,21 +12,21 @@ describe('UI', () => {
     configure({ adapter: new Adapter() })
   })
 
-  describe('Button Component', () => {
-    describe('Proptypes', () => {
-      beforeEach(() => {
-        state = {}
-        props = { btnText: 'Hello', btnHandler: '() => {}' }
-        component = shallow(<Button {...props} />)
-      })
+  beforeEach(() => {
+    state = {}
+    props = { btnText: 'Hello', btnHandler: () => {} }
+    component = shallow(<Button {...props} />)
+  })
 
+  describe('Button Component', () => {
+    describe('Checking Proptypes', () => {
       it('should validate prop-types ', () => {
         const propsError = checkPropErrors(component, props)
-        expect(propsError).toBeNull()
+        expect(propsError).toBe(null)
       })
     })
-    describe('Action Creator Tests', () => {
-      it('should find test-data field ', () => {
+    describe('Render Successfully', () => {
+      it('render button component ', () => {
         const wrapper = findByAttribute(component, `[type='button']`)
         expect(wrapper.length).toBe(1)
       })

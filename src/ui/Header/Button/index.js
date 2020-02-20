@@ -7,9 +7,11 @@ export default class Button extends Component {
   }
 
   render() {
+    const { btnText, btnHandler } = this.props
+
     return (
-      <button type="button" onClick={this.props.btnHandler}>
-        {this.props.btnText}
+      <button type="button" onClick={btnHandler}>
+        {btnText}
       </button>
     )
   }
