@@ -15,7 +15,7 @@
     "testing"
   ],
   "version": "1.0.0",
-  "author": "Zakriya Ali Sabir",
+  "author": "zakriyaalisabir",
   "homepage": "https://github.com/zakriyaalisabir",
   "dependencies": {
     "enzyme-adapter-react-16": "^1.15.2",
